@@ -39,6 +39,11 @@ btn8 = Button(tk, text="8", command=ocho)
 btn9 = Button(tk, text="9", command=nueve)
 btn0 = Button(tk, text="0", command=diez)
 
+sm = Button(tk, text="suma", command = "suma")
+rest = Button(tk, text="resta", command="resta")
+multip = Button(tk, text="multiplicacion", command="multiplicacion")
+div = Button(tk, text="division", command="division")
+
 btn1.pack()
 btn2.pack()
 btn3.pack()
@@ -49,5 +54,10 @@ btn7.pack()
 btn8.pack()
 btn9.pack()
 btn0.pack()
+
+sm.pack()
+rest.pack()
+multip.pack()
+div.pack()
 
 tk.mainloop()
