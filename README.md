@@ -58,6 +58,7 @@ div.pack()
 tk.mainloop()
 
 #modificacion interfaz
+
 from Tkinter import*
 
 
@@ -76,6 +77,11 @@ def botones(numeros):
     valor=valor+str(numeros)
     valores.set(valor)
 
+def operaciones():
+    global valor
+    operacion=str(eval(valor))
+    valores.set(operacion)
+    valor=""
 
 def borrar():
     global valor
