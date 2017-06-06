@@ -1,21 +1,11 @@
+"""
 # TallerCalculadora
 Grupo (Liz, Byron, Paul, Luis, David)
 from tkinter import *
 """
 
 from Tkinter import*
-
-
-ventana=Tk()
-ventana.title("CALCULADORA CIENTIFICA")
-ventana.configure(bg = 'beige')# define el color de la ventana
-
-frame=Frame(ventana)
-frame.grid(column=0,row=4,padx=(30,30),pady=(30,30))
-frame.columnconfigure(0,weight=1)
-frame.rowconfigure(0,weight=1)
-
-Label(ventana,text="CALCULADORA").grid(column=0,row=3)
+import math
 
 def botones(numeros):
     global valor
@@ -32,6 +22,38 @@ def borrar():
     global valor
     valor=""
     valores.set('0')
+
+def sin():
+    global valor
+    valor = float (valor)
+    valor = str(math.sin (valor))
+    valores.set(valor)
+    
+
+def cos():
+    global valor
+    valor = float (valor)    
+    valor = str(math.cos (valor)) 
+    valores.set(valor)
+
+def tan():
+    global valor
+    valor = float (valor)    
+    valor = str(math.tan (valor)) 
+    valores.set(valor)
+
+
+ventana=Tk()
+ventana.title("CALCULADORA CIENTIFICA")
+ventana.configure(bg = 'beige')# define el color de la ventana
+
+frame=Frame(ventana)
+frame.grid(column=0,row=4,padx=(30,30),pady=(30,30))
+frame.columnconfigure(0,weight=1)
+frame.rowconfigure(0,weight=1)
+
+Label(ventana,text="CALCULADORA").grid(column=0,row=3)
+
     
 valor=""
 valores=StringVar()
@@ -84,14 +106,15 @@ decimal.grid(column=2,row=5)
 elevar=Button(frame,text='^',width=3,command=lambda:botones('**'))
 elevar.grid(column=4,row=2)
 
-seno=Button(frame,text='sin',width=3,command=lambda:botones('sin'))
+seno=Button(frame,text='sin',width=3,command=sin)
 seno.grid(column=4,row=5)
 
-coseno=Button(frame,text='cos',width=3,command=lambda:botones('cos'))
+coseno=Button(frame,text='cos',width=3,command=cos)
 coseno.grid(column=5,row=5)
 
-tangente=Button(frame,text='tan',width=3,command=lambda:botones('tan'))
+tangente=Button(frame,text='tan',width=3,command=tan)
 tangente.grid(column=3,row=5)
+
 ventana.mainloop()
 
 
