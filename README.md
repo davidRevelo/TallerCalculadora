@@ -119,21 +119,36 @@ b9 =Button(frame,text='9',width=3,command=lambda:botones(9))
 b9.grid(column=3,row=2)
 b0=Button(frame,text='0',width=3,command=lambda:botones(0))
 b0.grid(column=1,row=5)
+
 suma=Button(frame,text='+',width=3,command=lambda:botones("+"))
 suma.grid(column=5,row=4)
+
 resta=Button(frame,text='-',width=3,command=lambda:botones("-"))
 resta.grid(column=4,row=4)
-igual=Button(frame,text='=',width=3,command=operaciones)
-igual.grid(column=5,row=5)
+
+igual=Button(frame,text='=',width=12,command=operaciones)
+igual.grid(column=3,row=6,columnspan = 3)
+
 divi=Button(frame,text='/',width=3,command=lambda:botones("/"))
 divi.grid(column=5,row=3)
+
 multi=Button(frame,text='*',width=3,command=lambda:botones("*"))
 multi.grid(column=4,row=3)
+
 decimal=Button(frame,text='.',width=3,command=lambda:botones('.'))
 decimal.grid(column=2,row=5)
+
 elevar=Button(frame,text='^',width=3,command=lambda:botones('**'))
 elevar.grid(column=4,row=2)
 
+seno=Button(frame,text='sin',width=3,command=lambda:botones('sin'))
+seno.grid(column=4,row=5)
+
+coseno=Button(frame,text='cos',width=3,command=lambda:botones('cos'))
+coseno.grid(column=5,row=5)
+
+tangente=Button(frame,text='tan',width=3,command=lambda:botones('tan'))
+tangente.grid(column=3,row=5)
 ventana.mainloop()
 
 
