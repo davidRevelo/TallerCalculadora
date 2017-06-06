@@ -1,6 +1,7 @@
 # TallerCalculadora
 Grupo (Liz, Byron, Paul, Luis, David)
 from tkinter import *
+"""
 #FUNCIONES
 def uno(): 
     print('1')
@@ -56,7 +57,7 @@ multip.pack()
 div.pack()
 
 tk.mainloop()
-
+"""
 #modificacion interfaz
 
 from Tkinter import*
@@ -64,6 +65,7 @@ from Tkinter import*
 
 ventana=Tk()
 ventana.title("CALCULADORA CIENTIFICA")
+ventana.configure(bg = 'beige')# define el color de la ventana
 
 frame=Frame(ventana)
 frame.grid(column=0,row=4,padx=(30,30),pady=(30,30))
